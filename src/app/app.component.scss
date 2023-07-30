@@ -1,0 +1,11 @@
+
+.header{
+    background-color:  #94c5d9;
+    display: flex;
+    justify-content: space-between;
+    .rigth-element{
+        display: flex;
+        justify-content: end;
+        justify-items: center;
+    }
+}
