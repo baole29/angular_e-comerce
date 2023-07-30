@@ -3,16 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { WjInputModule, WjInputMask } from '@grapecity/wijmo.angular2.input';
 import { LoginComponent } from './modules/login/login.component';
-import { HomeComponent } from './modules/home/home.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    WjInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

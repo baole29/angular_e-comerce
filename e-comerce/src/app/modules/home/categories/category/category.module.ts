@@ -7,7 +7,7 @@ import { CategoryComponent } from './category.component';
 
 @NgModule({
   declarations: [
-    CategoryComponent
+    
   ],
   imports: [
     CommonModule,
