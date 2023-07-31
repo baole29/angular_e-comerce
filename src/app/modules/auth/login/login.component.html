@@ -1,0 +1,38 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="user-name">User Name: </label>
+    <input id="user-name" type="email" formControlName="userName" />
+  </div>
+
+  <div
+    *ngIf="loginForm.get('userName')?.hasError && submitted"
+    [ngClass]="'error'"
+  >
+    <div *ngIf="loginForm.get('userName')?.hasError('required')">
+      Name is required
+    </div>
+    <div *ngIf="loginForm.get('userName')?.hasError('minlength')">
+      Name must be at least 5 characters long.
+    </div>
+    <div *ngIf="loginForm.get('userName')?.hasError('maxlength')">
+      Name can be max 10 characters long.
+    </div>
+  </div>
+  <div>
+    <label for="password">Password: </label>
+    <input id="password" type="password" formControlName="password" />
+    <div
+    *ngIf="loginForm.get('password')?.hasError && submitted"
+    [ngClass]="'error'"
+  >
+    <div *ngIf="loginForm.get('password')?.hasError('required')">
+      Password is required
+    </div>
+    <div *ngIf="loginForm.get('password')?.hasError('passwordvalid')">
+      Password is invalid
+    </div>
+  </div>
+  </div>
+
+  <button type="submit">Login</button>
+</form>

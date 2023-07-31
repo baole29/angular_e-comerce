@@ -4,7 +4,9 @@ import { HomeComponent } from './home.component';
 import { CategoriesComponent } from './categories/categories.component';
 
 const routes: Routes = [
-  { path: '', loadChildren:  () => import('./categories/categories.module').then(m => m.CategoriesModule)},
+  { path: '', loadChildren:  () => import('./categories/categories.module').then(m => m.CategoriesModule),
+
+},
 ];
 
 @NgModule({
